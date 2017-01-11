@@ -49,15 +49,15 @@ namespace BuildingAreaAnalysis
             for (int i = 0; i < 16; i++)
             {
                 Thread.Sleep(100);
-                double x = double.Parse(dt.Rows[i]["年份"].ToString().Trim());
-                double y1 = double.Parse(dt.Rows[i]["生态"].ToString().Trim());
-                double y2 = double.Parse(dt.Rows[i]["生活"].ToString().Trim());
-                double y3 = double.Parse(dt.Rows[i]["农业"].ToString().Trim());
-                double y4 = double.Parse(dt.Rows[i]["工业"].ToString().Trim());
+                double x = double.Parse(dt.Rows[i]["year"].ToString().Trim());
+                double y1 = double.Parse(dt.Rows[i]["Building"].ToString().Trim());
+                double y2 = double.Parse(dt.Rows[i]["Land"].ToString().Trim());
+                //double y3 = double.Parse(dt.Rows[i]["农业"].ToString().Trim());
+                //double y4 = double.Parse(dt.Rows[i]["工业"].ToString().Trim());
                 list1.Add(x, y1);
                 list2.Add(x, y2);
-                list3.Add(x, y3);
-                list4.Add(x, y4);
+                //list3.Add(x, y3);
+                //list4.Add(x, y4);
                 zedGraphControl1.GraphPane.XAxis.Scale.MaxAuto = true;
 
                 this.zedGraphControl1.AxisChange();
@@ -74,9 +74,9 @@ namespace BuildingAreaAnalysis
             myPane.GraphObjList.Clear();
 
             // Set up the title and axis labels
-            myPane.Title.Text = "分行业用水总量";
+            myPane.Title.Text = "用地需求状况";
             myPane.XAxis.Title.Text = "年份";
-            myPane.YAxis.Title.Text = "用水量";
+            myPane.YAxis.Title.Text = "需求量";
 
 
             list1 = new PointPairList();
@@ -89,20 +89,20 @@ namespace BuildingAreaAnalysis
             LineItem myCurve1 = null, myCurve2 = null, myCurve3 = null, myCurve4 = null;
 
 
-            myCurve1 = myPane.AddCurve("生态",
+            myCurve1 = myPane.AddCurve("Building",
                 list1, Color.Red, SymbolType.Diamond);
 
 
-            myCurve2 = myPane.AddCurve("生活",
+            myCurve2 = myPane.AddCurve("Land",
                 list2, Color.Blue, SymbolType.Circle);
 
 
-            myCurve3 = myPane.AddCurve("农业",
-                list3, Color.Green, SymbolType.Star);
+            //myCurve3 = myPane.AddCurve("农业",
+            //    list3, Color.Green, SymbolType.Star);
 
 
-            myCurve4 = myPane.AddCurve("工业",
-                list4, Color.Orange, SymbolType.Square);
+            //myCurve4 = myPane.AddCurve("工业",
+            //    list4, Color.Orange, SymbolType.Square);
 
 
 
@@ -120,19 +120,19 @@ namespace BuildingAreaAnalysis
 
             myCurve1.Line.Width = 1.0F;
             myCurve2.Line.Width = 1.0F;
-            myCurve3.Line.Width = 1.0F;
-            myCurve4.Line.Width = 1.0F;
+            //myCurve3.Line.Width = 1.0F;
+            //myCurve4.Line.Width = 1.0F;
 
 
             myCurve1.Symbol.Size = 2.0F;
             myCurve2.Symbol.Size = 2.0F;
-            myCurve3.Symbol.Size = 2.0F;
-            myCurve4.Symbol.Size = 2.0F;
+            //myCurve3.Symbol.Size = 2.0F;
+            //myCurve4.Symbol.Size = 2.0F;
 
             myCurve1.Symbol.Fill = new Fill(Color.White);
             myCurve2.Symbol.Fill = new Fill(Color.White);
-            myCurve3.Symbol.Fill = new Fill(Color.White);
-            myCurve4.Symbol.Fill = new Fill(Color.White);
+            //myCurve3.Symbol.Fill = new Fill(Color.White);
+            //myCurve4.Symbol.Fill = new Fill(Color.White);
 
 
             myPane.Chart.Fill = new Fill(Color.White,
@@ -154,19 +154,19 @@ namespace BuildingAreaAnalysis
         private void LoadData()
         {
             //数据库名字IndustrialDV
-            sConn = @"Provider = Microsoft.Jet.OLEDB.4.0;Data Source =" + Application.StartupPath + @"\Data\IndustrialDV.mdb;Jet OLEDB:Database Password = ";
+            sConn = @"Provider = Microsoft.Jet.OLEDB.4.0;Data Source =" + Application.StartupPath + @"\Data\data.mdb;Jet OLEDB:Database Password = ";
             if (pConn == null)
                 pConn = new OleDbConnection(sConn);
             if (pConn.State == ConnectionState.Closed)
                 pConn.Open();
             OleDbCommand cmd = pConn.CreateCommand();
-            cmd.CommandText = "Select id,年份,农业,工业,生活,生态 From TotalWater";
+            cmd.CommandText = "Select id,year,Building,Land From tb_building";
             OleDbDataAdapter oda = new OleDbDataAdapter(cmd);
             DataSet ds = new DataSet();
-            oda.Fill(ds, "TotalWater");
+            oda.Fill(ds, "tb_building");
             if (dt == null)
                 dt = new DataTable();
-            dt = ds.Tables["TotalWater"];
+            dt = ds.Tables["tb_building"];
         }
     }
 }

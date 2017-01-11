@@ -1,1 +1,14 @@
 G:\yangyangHU-BU\暑期项目\BuildingArea\BuildingAreaAnalysis\BuildingAreaAnalysis\bin\Debug\BuildingAreaAnalysis.exe.config
+C:\Users\yang\Desktop\BuildingArea_Analysis\BuildingArea\BuildingAreaAnalysis\BuildingAreaAnalysis\bin\Debug\BuildingAreaAnalysis.pdb
+C:\Users\yang\Desktop\BuildingArea_Analysis\BuildingArea\BuildingAreaAnalysis\BuildingAreaAnalysis\obj\Debug\BuildingAreaAnalysis.Form1.resources
+C:\Users\yang\Desktop\BuildingArea_Analysis\BuildingArea\BuildingAreaAnalysis\BuildingAreaAnalysis\obj\Debug\BuildingAreaAnalysis.Properties.Resources.resources
+C:\Users\yang\Desktop\BuildingArea_Analysis\BuildingArea\BuildingAreaAnalysis\BuildingAreaAnalysis\obj\Debug\BuildingAreaAnalysis.csproj.GenerateResource.Cache
+C:\Users\yang\Desktop\BuildingArea_Analysis\BuildingArea\BuildingAreaAnalysis\BuildingAreaAnalysis\obj\Debug\BuildingAreaAnalysis.pdb
+C:\Users\yang\Desktop\BuildingArea_Analysis\BuildingArea\BuildingAreaAnalysis\BuildingAreaAnalysis\bin\Debug\BuildingAreaAnalysis.dll.config
+C:\Users\yang\Desktop\BuildingArea_Analysis\BuildingArea\BuildingAreaAnalysis\BuildingAreaAnalysis\bin\Debug\BuildingAreaAnalysis.dll
+C:\Users\yang\Desktop\BuildingArea_Analysis\BuildingArea\BuildingAreaAnalysis\BuildingAreaAnalysis\bin\Debug\MyPluginEngine.dll
+C:\Users\yang\Desktop\BuildingArea_Analysis\BuildingArea\BuildingAreaAnalysis\BuildingAreaAnalysis\bin\Debug\log4net.dll
+C:\Users\yang\Desktop\BuildingArea_Analysis\BuildingArea\BuildingAreaAnalysis\BuildingAreaAnalysis\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\yang\Desktop\BuildingArea_Analysis\BuildingArea\BuildingAreaAnalysis\BuildingAreaAnalysis\bin\Debug\MyPluginEngine.pdb
+C:\Users\yang\Desktop\BuildingArea_Analysis\BuildingArea\BuildingAreaAnalysis\BuildingAreaAnalysis\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\yang\Desktop\BuildingArea_Analysis\BuildingArea\BuildingAreaAnalysis\BuildingAreaAnalysis\obj\Debug\BuildingAreaAnalysis.dll
